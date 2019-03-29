@@ -6,6 +6,8 @@ RUN mkdir /code
 
 WORKDIR /code
 
+RUN apt-get update && apt-get install -y git
+
 RUN git clone https://github.com/Abunwer/dockerizing-django.git
 
 RUN pip install --upgrade pip
